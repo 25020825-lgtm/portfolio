@@ -123,6 +123,14 @@
       th,td{padding:.5rem .6rem}
       .hero h1{font-size:1.6rem}
     }
+    .pdf-btn{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.25rem;padding:.6rem 1.2rem;background:linear-gradient(135deg,var(--cyan-dim),rgba(57,255,20,.06));border:1px solid var(--cyan);border-radius:var(--rs);color:var(--cyan);font-family:var(--fh);font-size:.82rem;font-weight:600;cursor:pointer;transition:all .3s;text-decoration:none}
+    .pdf-btn:hover{background:var(--cyan);color:#000;box-shadow:var(--glow-cyan);transform:translateY(-1px)}
+    .pdf-modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:1.5rem}
+    .pdf-modal.show{display:flex}
+    .pdf-modal-inner{position:relative;width:100%;max-width:900px;height:85vh;border-radius:var(--r);overflow:hidden;border:1px solid var(--border);box-shadow:0 0 40px rgba(0,229,255,.15)}
+    .pdf-modal-inner iframe{width:100%;height:100%;border:none;background:#111}
+    .pdf-close{position:absolute;top:12px;right:14px;width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--surface);color:var(--text1);font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;z-index:10}
+    .pdf-close:hover{background:var(--cyan);color:#000;border-color:var(--cyan)}
   </style>
 </head>
 <body>
@@ -200,6 +208,7 @@
     └── 📄 DiChuyen.txt              (di chuyển bằng Cut &amp; Paste, sau đó bị xóa vĩnh viễn)</div>
         <div class="ib">💡 <strong>Quy tắc đặt tên:</strong> <code>[MãMôn]_[TênDựÁn]_[Version].[ext]</code> (Ví dụ: <code>PHY101_BaoCaoRLC_v2.pdf</code>)</div>
         <div class="ib">💡 <strong>Insight:</strong> Hệ thống tệp giống như đội hình bóng đá — mỗi file cần có vị trí xác định, tên gọi nhất quán và vai trò rõ ràng. Sao lưu dữ liệu thường xuyên trước khi xóa vĩnh viễn.</div>
+        <button class="pdf-btn" onclick="openPdf('https://drive.google.com/file/d/1s9tVDs89aq0JUrqPA9FzmMDGrIzviVtW/preview')">📄 Xem tài liệu PDF</button>
       </div>
     </div>
 
@@ -251,6 +260,7 @@
           <li><strong>Drepper (2007):</strong> Tác giả là maintainer thư viện glibc của Linux. Hơn 1000 trích dẫn, được coi là "sách giáo khoa" cho lập trình viên C.</li>
           <li><strong>Linux Kernel Org (2024):</strong> Nguồn sự thật duy nhất (Single source of truth) về cơ chế Kernel, cập nhật liên tục.</li>
         </ul>
+        <button class="pdf-btn" onclick="openPdf('https://drive.google.com/file/d/1BYXgMrNnfmXEbMMZmN-h8Is6RR4PMg9D/preview')">📄 Xem tài liệu PDF</button>
       </div>
     </div>
 
@@ -289,6 +299,7 @@
           <li><strong>Chain-of-Thought (CoT):</strong> Yêu cầu suy luận từng bước → giảm ảo giác (Hallucination)</li>
           <li><strong>Constrained Output:</strong> Ràng buộc định dạng → ép AI lọc thông tin</li>
         </ul>
+        <button class="pdf-btn" onclick="openPdf('https://drive.google.com/file/d/1MpYZHWMTue_hO7r0Mr2qw-fODoQUcazv/preview')">📄 Xem tài liệu PDF</button>
       </div>
     </div>
 
@@ -327,6 +338,7 @@
         </tbody></table></div>
         <h4>Kết quả</h4>
         <ul><li>✅ Hoàn thiện dự án trước hạn (deadline)</li><li>✅ Hạn chế tối đa thời gian "chết" trong khâu giao tiếp và ghép nối tài liệu</li><li>✅ Cả nhóm đồng bộ về tiến độ và tài liệu</li></ul>
+        <button class="pdf-btn" onclick="openPdf('https://drive.google.com/file/d/1Ek3LqVmEQGxMCnvM_-tmCTKeYDFtxh2A/preview')">📄 Xem tài liệu PDF</button>
       </div>
     </div>
 
@@ -368,6 +380,7 @@
           <tr><td>Tốn nhiều thời gian ở khâu "tay chân"</td><td>Từ "người thợ" → "Quản lý dự án &amp; Biên tập viên"</td></tr>
         </tbody></table></div>
         <p><strong>Kỹ năng cốt lõi học được:</strong> <strong>AI-directing</strong> (Điều phối AI) thay vì phụ thuộc AI.</p>
+        <button class="pdf-btn" onclick="openPdf('https://drive.google.com/file/d/15cMqjPwZj2YMMbJc-0YMKqPHudDDRgm6/preview')">📄 Xem tài liệu PDF</button>
       </div>
     </div>
 
@@ -400,6 +413,7 @@
           <tr><td>3</td><td>🔒 <strong>Bảo mật dữ liệu nghiêm ngặt</strong></td><td>Không bao giờ đưa thông tin cá nhân, API keys thật vào khung chat</td></tr>
           <tr><td>4</td><td>🚩 <strong>Tránh ảo giác năng lực</strong></td><td>Khai báo rõ ràng phần nào dùng AI hỗ trợ</td></tr>
         </tbody></table></div>
+        <button class="pdf-btn" onclick="openPdf('https://drive.google.com/file/d/1XXI289Nhl6sKW4cWt7JBxRqc-zYjWsMl/preview')">📄 Xem tài liệu PDF</button>
       </div>
     </div>
   </section>
@@ -428,11 +442,21 @@
     </div>
   </section>
 
+  <!-- PDF Modal -->
+  <div class="pdf-modal" id="pdfModal" onclick="closePdf(event)">
+    <div class="pdf-modal-inner">
+      <button class="pdf-close" onclick="closePdf(event,true)">✕</button>
+      <iframe id="pdfFrame" src="" allow="autoplay"></iframe>
+    </div>
+  </div>
+
   <footer class="ft">Làm xong giữa những đêm code và những buổi đá bóng cùng bạn bè — 2026</footer>
 </div>
 <script>
 function go(n){document.querySelectorAll('.pnl').forEach(p=>p.classList.remove('on'));document.querySelectorAll('.nav button').forEach(t=>t.classList.remove('on'));document.getElementById('p-'+n).classList.add('on');document.getElementById('t-'+n).classList.add('on');window.scrollTo({top:0,behavior:'smooth'})}
 function tog(id){document.getElementById(id).classList.toggle('open')}
+function openPdf(url){document.getElementById('pdfFrame').src=url;document.getElementById('pdfModal').classList.add('show');document.body.style.overflow='hidden'}
+function closePdf(e,force){if(force||e.target.id==='pdfModal'){document.getElementById('pdfModal').classList.remove('show');document.getElementById('pdfFrame').src='';document.body.style.overflow=''}}
 </script>
 </body>
 </html>
